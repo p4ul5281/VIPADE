@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Our Menu</h1>
+
+<h2>Food</h2>
+<div class="grid">
+    {% for item in food %}
+    <div class="dish">
+        <img src="{{ url_for('static', filename='images/' + item.image) }}" alt="{{ item.name }}">
+        <div class="info">
+            <h3>{{ item.name }}</h3>
+            <p class="price">₦{{ item.price }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<h2>Drinks</h2>
+<div class="grid">
+    {% for item in drinks %}
+    <div class="dish">
+        <img src="{{ url_for('static', filename='images/' + item.image) }}" alt="{{ item.name }}">
+        <div class="info">
+            <h3>{{ item.name }}</h3>
+            <p class="price">₦{{ item.price }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

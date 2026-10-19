@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Contact us</h1>
+<p>Address: office depot</p>
+<p>Phone: 09066572936</p>
+{% if sent %}
+    <p class="success">Thank you! We got your message.</p>
+{% endif %}
+
+<form method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+    <button type="submit">Send</button>
+</form>
+{% endblock %}
