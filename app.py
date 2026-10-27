@@ -5,7 +5,7 @@ app = Flask(__name__)
 FOOD = [
     {"name": "Jollof ", "price": 2500, "image": "jollof.jpg"},
     {"name":" chicken", "price": 3000, "image": "chicken.jpg"},
-    {"name": "Fried plantain", "price": 1000, "image": "fried_plantain.jpg"},
+    {"name": "Fried plantain", "price": 1000, "image": "fried plantain.jpg"},
     {"name": "Salad", "price": 1500, "image": "salad.jpg"},
 ]
 
