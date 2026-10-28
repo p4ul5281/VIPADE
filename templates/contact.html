@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Contact us</h1>
+<a class="button" href="tel:{{ PHONE }}">Call us</a>
+<a class="button" href="https://wa.me/{{ WHATSAPP }}" target="_blank">Chat on WhatsApp</a>
 <p>Address: office depot</p>
 <p>Phone: 09066572936</p>
 {% if sent %}

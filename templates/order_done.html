@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Thank you, {{ name }}!</h1>
+<p>Your order:</p>
+<ul class="menu">
+    {% for it in items %}
+    <li><span>{{ it.qty }} x {{ it.name }}</span><span>₦{{ "{:,}".format(it.cost) }}</span></li>
+    {% endfor %}
+</ul>
+<p><strong>Total: ₦{{ "{:,}".format(total) }}</strong> ({{ method }})</p>
+
+<div class="pay-box">
+    <h2>Pay by bank transfer</h2>
+    <p>Bank: <strong>{{ BANK_NAME }}</strong></p>
+    <p>Account name: <strong>{{ ACCOUNT_NAME }}</strong></p>
+    <p>Account number: <strong>{{ ACCOUNT_NUMBER }}</strong></p>
+</div>
+
+<p>After you pay, tap the button below to send your order and payment proof to us on WhatsApp. Your order is confirmed once we see your payment.</p>
+<a class="button" href="{{ wa_link }}" target="_blank">Send order on WhatsApp</a>
+{% endblock %}

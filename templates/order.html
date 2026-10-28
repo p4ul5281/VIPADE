@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Place your order</h1>
+{% if error %}<p class="error">{{ error }}</p>{% endif %}
+
+<form method="POST">
+    <h2>Food</h2>
+    {% for item in food %}
+    <div class="order-item">
+        <span>{{ item.name }} - ₦{{ item.price }}</span>
+        <input type="number" name="qty_{{ loop.index0 }}" min="0" max="50" value="0">
+    </div>
+    {% endfor %}
+
+    <h2>Drinks</h2>
+    {% for item in drinks %}
+    <div class="order-item">
+        <span>{{ item.name }} - ₦{{ item.price }}</span>
+        <input type="number" name="qty_{{ loop.index0 + food|length }}" min="0" max="50" value="0">
+    </div>
+    {% endfor %}
+
+    <h2>Your details</h2>
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="tel" name="phone" placeholder="Phone number" required>
+    <label><input type="radio" name="method" value="Pickup" checked> Pickup</label>
+    <label><input type="radio" name="method" value="Delivery"> Delivery</label>
+    <input type="text" name="address" placeholder="Delivery address (for delivery only)">
+    <textarea name="note" rows="3" placeholder="Any note for us?"></textarea>
+    <button type="submit" class="place-order">Place order →</button>
+</form>
+{% endblock %}

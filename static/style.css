@@ -119,3 +119,57 @@ footer { text-align: center; padding: 30px; color: #777; }
 .info { padding: 14px; text-align: center; }
 .info h3 { margin: 0 0 6px; }
 .price { color: #7a1f1f; font-weight: 600; margin: 0; }
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.order-item input { width: 70px; }
+.pay-box {
+    background: #fff3d6;
+    border: 2px dashed #7a1f1f;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin: 20px 0;
+}
+.error { color: #b00020; font-weight: 600; }
+/* Order button in the top bar */
+nav .order-btn {
+    background: linear-gradient(135deg, #ffd700, #ff9800);
+    color: #1a1a1a;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.45);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+nav .order-btn:hover {
+    color: #1a1a1a;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 152, 0, 0.6);
+}
+
+/* Place order button */
+.place-order {
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(21, 128, 61, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.place-order:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(21, 128, 61, 0.55);
+}
+.place-order:active {
+    transform: translateY(0);
+}
